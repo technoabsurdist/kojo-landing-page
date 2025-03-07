@@ -278,7 +278,7 @@ const Index = () => {
                   <span className="text-green-500">"correct"</span>:
                 </p>
                 <p className="font-mono pl-4">
-                  score += <span className="text-kojo-blue">10</span>
+                    score += <span className="text-kojo-blue">10</span>
                 </p>
               </div>
 
