@@ -120,7 +120,8 @@ const Index = () => {
               Why Learn with Kojo?
             </h2>
             <p className="text-xl max-w-2xl mx-auto text-gray-700">
-              Designed to make coding accessible and enjoyable for everyone
+              Your personal learning adventure: LLM-powered lessons that adapt,
+              engage, and never run out.
             </p>
           </div>
 
@@ -178,8 +179,8 @@ const Index = () => {
             How Kojo Works
           </h2>
           <p className="text-xl max-w-2xl mx-auto text-gray-700">
-            Our approach makes learning to code fun and effective. Your learning
-            path is completely personalized based on your goals and interests.
+            Lessons, curriculum, and projects are all LLM-generated. You can
+            choose to follow the path exactly, or customize it to your liking.
           </p>
         </div>
 
@@ -217,7 +218,7 @@ const Index = () => {
                 </div>
                 <div>
                   <h3 className="text-xl font-bold mb-2">
-                    Practice with AI-generated interactive challenges
+                    Practice with interactive challenges
                   </h3>
                   <p className="text-gray-700">
                     Apply what you've learned through fun coding puzzles and
