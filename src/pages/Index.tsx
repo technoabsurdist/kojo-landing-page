@@ -89,9 +89,10 @@ const Index = () => {
               <img 
                 src="/lovable-uploads/f19e84f3-09f5-4b7f-b1b7-63962994434b.png" 
                 alt="Kojo character" 
-                className="w-64 h-auto animate-bounce"
+                className="w-64 h-auto animate-bounce z-10 relative"
+                style={{ filter: "drop-shadow(0px 4px 8px rgba(0,0,0,0.2))" }}
               />
-              <div className="absolute -bottom-6 -right-12 animate-float">
+              <div className="absolute -bottom-6 -right-10 z-20 animate-float">
                 <StreakCard />
               </div>
             </div>
