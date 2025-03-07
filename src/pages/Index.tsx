@@ -74,8 +74,8 @@ const Index = () => {
               Learn to code with <span className="text-kojo-purple">Kojo</span>
             </h1>
             <p className="text-xl mb-8 text-gray-700">
-              Master programming through fun, project-based lessons and build
-              real coding skills at your own pace.
+              Master programming through a fully personalized curriculum and
+              learning path, with fun projects that build real coding skills.
             </p>
             <div className="space-y-4 sm:space-y-0 sm:space-x-4 sm:flex">
               <KojoButton
