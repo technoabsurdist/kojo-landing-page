@@ -1,3 +1,4 @@
+
 import { useState } from "react";
 import { KojoButton } from "@/components/KojoButton";
 import { NotifyModal } from "@/components/NotifyModal";
@@ -90,9 +91,15 @@ const Index = () => {
                 src="/lovable-uploads/f19e84f3-09f5-4b7f-b1b7-63962994434b.png" 
                 alt="Kojo character" 
                 className="w-64 h-auto animate-bounce z-10 relative"
-                style={{ filter: "drop-shadow(0px 4px 8px rgba(0,0,0,0.2))" }}
+                style={{ 
+                  filter: "drop-shadow(0px 4px 8px rgba(0,0,0,0.3))",
+                  transform: "translateX(-15px)"
+                }}
               />
-              <div className="absolute -bottom-6 -right-10 z-20 animate-float">
+              <div 
+                className="absolute -bottom-6 -right-4 z-20 animate-float"
+                style={{ filter: "drop-shadow(2px 4px 6px rgba(0,0,0,0.25))" }}
+              >
                 <StreakCard />
               </div>
             </div>
