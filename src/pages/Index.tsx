@@ -64,7 +64,7 @@ const Index = () => {
               <img src="/lovable-uploads/e8aee2d2-c18f-445b-8a01-69227e028ebe.png" alt="Kojo character" style={{
               filter: "drop-shadow(0px 4px 8px rgba(0,0,0,0.3))",
               transform: "translateX(-15px)"
-            }} className="w-85 h-auto animate-bounce z-10 relative object-contain" />
+            }} className="w-80 h-auto animate-bounce z-10 relative object-contain" />
               <div className="absolute -bottom-6 -right-4 z-20 animate-float" style={{
               filter: "drop-shadow(2px 4px 6px rgba(0,0,0,0.25))"
             }}>
