@@ -74,8 +74,8 @@ const Index = () => {
               Learn to code with <span className="text-kojo-purple">Kojo</span>
             </h1>
             <p className="text-xl mb-8 text-gray-700">
-              Master programming through a fully personalized curriculum and
-              learning path, with fun projects that build real coding skills.
+              Master programming with a fully personalized learning path,
+              using fun projects to build real coding skills.
             </p>
             <div className="space-y-4 sm:space-y-0 sm:space-x-4 sm:flex">
               <KojoButton
@@ -179,8 +179,8 @@ const Index = () => {
             How Kojo Works
           </h2>
           <p className="text-xl max-w-2xl mx-auto text-gray-700">
-            Lessons, curriculum, and projects are all LLM-generated. You can
-            choose to follow the path exactly, or customize it to your liking.
+          Kojo puts projects at the center of learning, guiding you through
+          hands-on challenges that build real skills and a portfolio that proves it.
           </p>
         </div>
 
@@ -274,7 +274,7 @@ const Index = () => {
                   <span className="text-kojo-blue">0</span>;
                 </p>
                 <p className="font-mono">
-                  <span className="text-kojo-purple">if</span> (answer ==={" "}
+                  <span className="text-kojo-purple">if</span> (answer =={" "}
                   <span className="text-green-500">"correct"</span>) {"{"}
                 </p>
                 <p className="font-mono pl-4">
