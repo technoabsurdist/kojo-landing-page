@@ -58,7 +58,7 @@ const Index = () => {
           </div>
           <div className="order-1 md:order-2 flex justify-center animate-slide-left">
             <div className="relative">
-              <img src="/lovable-uploads/e8aee2d2-c18f-445b-8a01-69227e028ebe.png" alt="Kojo character" style={{
+              <img src="/lovable-uploads/f19e84f3-09f5-4b7f-b1b7-63962994434b.png" alt="Kojo character" style={{
               filter: "drop-shadow(0px 4px 8px rgba(0,0,0,0.3))",
               transform: "translateX(-15px)"
             }} className="w-80 h-auto animate-bounce z-10 relative object-contain" />
@@ -171,7 +171,7 @@ const Index = () => {
                 <p className="font-mono">{'}'}</p>
               </div>
               
-              <img src="/lovable-uploads/e8aee2d2-c18f-445b-8a01-69227e028ebe.png" alt="Kojo character" className="w-16 h-auto mx-auto" />
+              <img src="/lovable-uploads/f19e84f3-09f5-4b7f-b1b7-63962994434b.png" alt="Kojo character" className="w-16 h-auto mx-auto" />
               
               <p className="text-center mt-3 font-medium">
                 Great job! Now try the next challenge.
