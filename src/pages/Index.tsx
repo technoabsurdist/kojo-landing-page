@@ -270,17 +270,16 @@ const Index = () => {
 
               <div className="bg-white rounded-xl p-4 border-2 border-black mb-6">
                 <p className="font-mono">
-                  <span className="text-kojo-purple">let</span> score ={" "}
-                  <span className="text-kojo-blue">0</span>;
+                  score ={" "}
+                  <span className="text-kojo-blue">0</span>
                 </p>
                 <p className="font-mono">
-                  <span className="text-kojo-purple">if</span> (answer =={" "}
-                  <span className="text-green-500">"correct"</span>) {"{"}
+                  <span className="text-kojo-purple">if</span> answer =={" "}
+                  <span className="text-green-500">"correct"</span>:
                 </p>
                 <p className="font-mono pl-4">
-                  score += <span className="text-kojo-blue">10</span>;
+                  score += <span className="text-kojo-blue">10</span>
                 </p>
-                <p className="font-mono">{"}"}</p>
               </div>
 
               <img
