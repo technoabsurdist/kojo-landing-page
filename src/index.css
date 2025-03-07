@@ -1,3 +1,5 @@
+/* Custom fonts */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
 
 @tailwind base;
 @tailwind components;
@@ -73,7 +75,7 @@
 
   body {
     @apply bg-white text-kojo-dark;
-    font-family: 'Poppins', 'Inter', system-ui, sans-serif;
+    font-family: "Poppins", "Inter", system-ui, sans-serif;
   }
 }
 
@@ -91,7 +93,7 @@
   .btn-kojo-blue {
     @apply btn-kojo bg-kojo-blue text-kojo-dark hover:bg-opacity-90;
   }
-  
+
   .btn-kojo-teal {
     @apply btn-kojo bg-kojo-teal text-kojo-dark hover:bg-opacity-90;
   }
@@ -99,11 +101,8 @@
   .card-kojo {
     @apply bg-white rounded-3xl border-2 border-black p-6 shadow-[6px_6px_0px_0px_rgba(0,0,0,1)];
   }
-  
+
   .feature-card {
     @apply card-kojo transition-all duration-300 hover:translate-y-[-5px];
   }
 }
-
-/* Custom fonts */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');

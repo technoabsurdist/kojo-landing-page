@@ -1,8 +1,8 @@
 import { createClient } from "@supabase/supabase-js";
 
 // Define the URL and key from environment variables
-const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL!;
-const supabaseAnonKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!;
+const supabaseUrl = import.meta.env.VITE_SUPABASE_URL;
+const supabaseAnonKey = import.meta.env.VITE_SUPABASE_ANON_KEY;
 
 // Create Supabase client with simplified options
 export const supabase = createClient(supabaseUrl, supabaseAnonKey, {
@@ -31,10 +31,10 @@ export const checkSupabaseConnection = async () => {
       statusText: response.statusText,
     };
   } catch (error) {
-    console.error("Supabase connection check failed:", error);
     return {
       ok: false,
-      error,
+      status: 500,
+      statusText: error instanceof Error ? error.message : String(error),
     };
   }
 };
