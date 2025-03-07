@@ -1,10 +1,9 @@
-
 import { useState } from "react";
 import { KojoButton } from "@/components/KojoButton";
 import { NotifyModal } from "@/components/NotifyModal";
 import { FeatureCard } from "@/components/FeatureCard";
 import { StreakCard } from "@/components/StreakCard";
-import { Apple, Bell, Code, Trophy, BookOpen, Zap, Menu, X } from "lucide-react";
+import { Bell, Code, Trophy, BookOpen, Zap, Menu, X } from "lucide-react";
 
 const Index = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -19,7 +18,6 @@ const Index = () => {
             <h1 className="text-3xl font-bold">Kojo</h1>
           </div>
           
-          {/* Desktop navigation */}
           <nav className="hidden md:flex items-center space-x-8">
             <a href="#features" className="font-medium hover:text-kojo-purple transition-colors">Features</a>
             <a href="#how-it-works" className="font-medium hover:text-kojo-purple transition-colors">How It Works</a>
@@ -32,7 +30,6 @@ const Index = () => {
             </KojoButton>
           </nav>
           
-          {/* Mobile menu button */}
           <button 
             className="md:hidden p-2"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
@@ -41,7 +38,6 @@ const Index = () => {
           </button>
         </div>
         
-        {/* Mobile navigation */}
         {mobileMenuOpen && (
           <div className="md:hidden mt-4 pt-4 border-t animate-slide-down">
             <nav className="flex flex-col space-y-4">
@@ -87,13 +83,6 @@ const Index = () => {
             <div className="space-y-4 sm:space-y-0 sm:space-x-4 sm:flex">
               <KojoButton 
                 variant="purple"
-                className="w-full sm:w-auto"
-                icon={<Apple size={20} />}
-              >
-                Download on App Store
-              </KojoButton>
-              <KojoButton 
-                variant="blue" 
                 className="w-full sm:w-auto"
                 onClick={() => setIsModalOpen(true)}
                 icon={<Bell size={20} />}
@@ -248,13 +237,7 @@ const Index = () => {
             Join thousands of learners who are building real coding skills with Kojo
           </p>
           
-          <div className="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4">
-            <KojoButton 
-              variant="teal"
-              icon={<Apple size={20} />}
-            >
-              Download on App Store
-            </KojoButton>
+          <div className="flex justify-center">
             <KojoButton 
               variant="blue"
               onClick={() => setIsModalOpen(true)}
