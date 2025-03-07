@@ -5,7 +5,7 @@ export const StreakCard = () => {
   const days = ["sun", "mon", "tue", "wed", "thurs"];
   
   return (
-    <div className="bg-kojo-teal rounded-[25px] border-3 border-black p-4 shadow-[6px_6px_0px_0px_rgba(0,0,0,0.2)] scale-90 origin-top-right">
+    <div className="bg-kojo-teal rounded-[25px] border-4 border-black p-4 shadow-[6px_6px_0px_0px_rgba(0,0,0,0.2)] scale-90 origin-top-right">
       <h3 className="text-2xl font-bold mb-4 text-black">Streak</h3>
       <div className="flex justify-between gap-1">
         {days.map((day) => (
