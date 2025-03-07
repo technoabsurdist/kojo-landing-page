@@ -21,13 +21,6 @@ const Index = () => {
           <nav className="hidden md:flex items-center space-x-8">
             <a href="#features" className="font-medium hover:text-kojo-purple transition-colors">Features</a>
             <a href="#how-it-works" className="font-medium hover:text-kojo-purple transition-colors">How It Works</a>
-            <KojoButton 
-              variant="purple"
-              onClick={() => setIsModalOpen(true)}
-              icon={<Bell size={18} />}
-            >
-              Notify on release
-            </KojoButton>
           </nav>
           
           <button 
