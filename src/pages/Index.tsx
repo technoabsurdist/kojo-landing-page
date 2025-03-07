@@ -1,46 +1,69 @@
-
 import { useState } from "react";
 import { KojoButton } from "@/components/KojoButton";
-import { NotifyModal } from "@/components/NotifyModal";
-import { FeatureCard } from "@/components/FeatureCard";
 import { StreakCard } from "@/components/StreakCard";
 import { Bell, Code, Trophy, BookOpen, Zap, Menu, X } from "lucide-react";
+import { WaitlistModal } from "@/components/WaitlistModal";
+import { FeatureCard } from "@/components/FeatureCard";
 
 const Index = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
-  return <div className="min-h-screen">
+  return (
+    <div className="min-h-screen">
       {/* Header */}
       <header className="container mx-auto px-4 py-6">
         <div className="flex justify-between items-center">
           <div className="flex items-center">
             <h1 className="text-3xl font-bold">Kojo</h1>
           </div>
-          
+
           <nav className="hidden md:flex items-center space-x-8">
-            <a href="#features" className="font-medium hover:text-kojo-purple transition-colors">Features</a>
-            <a href="#how-it-works" className="font-medium hover:text-kojo-purple transition-colors">How It Works</a>
-            <KojoButton variant="purple" onClick={() => setIsModalOpen(true)} icon={<Bell size={18} />}>
-              Notify on release
-            </KojoButton>
+            <a
+              href="#features"
+              className="font-medium hover:text-kojo-purple transition-colors"
+            >
+              Features
+            </a>
+            <a
+              href="#how-it-works"
+              className="font-medium hover:text-kojo-purple transition-colors"
+            >
+              How It Works
+            </a>
+            {/* <KojoButton variant="purple" onClick={() => setIsModalOpen(true)} icon={<Bell size={18} />}> */}
+            {/* Join Waitlist */}
+            {/* </KojoButton> */}
           </nav>
-          
-          <button className="md:hidden p-2" onClick={() => setMobileMenuOpen(!mobileMenuOpen)}>
+
+          <button
+            className="md:hidden p-2"
+            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+          >
             {mobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
         </div>
-        
-        {mobileMenuOpen && <div className="md:hidden mt-4 pt-4 border-t animate-slide-down">
+
+        {mobileMenuOpen && (
+          <div className="md:hidden mt-4 pt-4 border-t animate-slide-down">
             <nav className="flex flex-col space-y-4">
-              <a href="#features" className="py-2 font-medium hover:text-kojo-purple transition-colors" onClick={() => setMobileMenuOpen(false)}>
+              <a
+                href="#features"
+                className="py-2 font-medium hover:text-kojo-purple transition-colors"
+                onClick={() => setMobileMenuOpen(false)}
+              >
                 Features
               </a>
-              <a href="#how-it-works" className="py-2 font-medium hover:text-kojo-purple transition-colors" onClick={() => setMobileMenuOpen(false)}>
+              <a
+                href="#how-it-works"
+                className="py-2 font-medium hover:text-kojo-purple transition-colors"
+                onClick={() => setMobileMenuOpen(false)}
+              >
                 How It Works
               </a>
             </nav>
-          </div>}
+          </div>
+        )}
       </header>
 
       {/* Hero Section */}
@@ -50,22 +73,38 @@ const Index = () => {
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6">
               Learn to code with <span className="text-kojo-purple">Kojo</span>
             </h1>
-            <p className="text-xl mb-8 text-gray-700">Master programming through fun, project-based lessons and build real coding skills at your own pace.</p>
+            <p className="text-xl mb-8 text-gray-700">
+              Master programming through fun, project-based lessons and build
+              real coding skills at your own pace.
+            </p>
             <div className="space-y-4 sm:space-y-0 sm:space-x-4 sm:flex">
-              <KojoButton variant="purple" className="w-full sm:w-auto" onClick={() => setIsModalOpen(true)} icon={<Bell size={20} />}>
-                Notify on release
+              <KojoButton
+                variant="purple"
+                className="w-full sm:w-auto"
+                onClick={() => setIsModalOpen(true)}
+                icon={<Bell size={20} />}
+              >
+                Join Waitlist
               </KojoButton>
             </div>
           </div>
           <div className="order-1 md:order-2 flex justify-center animate-slide-left">
             <div className="relative">
-              <img src="/lovable-uploads/e8aee2d2-c18f-445b-8a01-69227e028ebe.png" alt="Kojo character" style={{
-              filter: "drop-shadow(0px 4px 8px rgba(0,0,0,0.3))",
-              transform: "translateX(-15px)"
-            }} className="w-80 h-auto animate-bounce z-10 relative object-contain" />
-              <div className="absolute -bottom-6 -right-4 z-20 animate-float" style={{
-              filter: "drop-shadow(2px 4px 6px rgba(0,0,0,0.25))"
-            }}>
+              <img
+                src="/lovable-uploads/e8aee2d2-c18f-445b-8a01-69227e028ebe.png"
+                alt="Kojo character"
+                style={{
+                  filter: "drop-shadow(0px 4px 8px rgba(0,0,0,0.3))",
+                  transform: "translateX(-15px)",
+                }}
+                className="w-80 h-auto animate-bounce z-10 relative object-contain"
+              />
+              <div
+                className="absolute -bottom-6 -right-4 z-20 animate-float"
+                style={{
+                  filter: "drop-shadow(2px 4px 6px rgba(0,0,0,0.25))",
+                }}
+              >
                 <StreakCard />
               </div>
             </div>
@@ -77,80 +116,148 @@ const Index = () => {
       <section id="features" className="py-16 md:py-24 bg-white">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">Why Learn with Kojo?</h2>
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">
+              Why Learn with Kojo?
+            </h2>
             <p className="text-xl max-w-2xl mx-auto text-gray-700">
               Designed to make coding accessible and enjoyable for everyone
             </p>
           </div>
-          
+
           <div className="grid md:grid-cols-3 gap-8">
-            <div className="animate-slide-up" style={{
-            animationDelay: "0.1s"
-          }}>
-              <FeatureCard icon={<Trophy size={24} />} title="Gamified Learning" description="Earn rewards as you progress, build streaks, and compete with friends to stay motivated." color="purple" />
+            <div
+              className="animate-slide-up"
+              style={{
+                animationDelay: "0.1s",
+              }}
+            >
+              <FeatureCard
+                icon={<Trophy size={24} />}
+                title="Gamified Learning"
+                description="Earn rewards as you progress, build streaks, and compete with friends to stay motivated."
+                color="purple"
+              />
             </div>
-            <div className="animate-slide-up" style={{
-            animationDelay: "0.2s"
-          }}>
-              <FeatureCard icon={<Code size={24} />} title="Real Coding Skills" description="Learn practical programming skills that translate directly to real-world applications." color="blue" />
+            <div
+              className="animate-slide-up"
+              style={{
+                animationDelay: "0.2s",
+              }}
+            >
+              <FeatureCard
+                icon={<Code size={24} />}
+                title="Real Coding Skills"
+                description="Learn practical programming skills that translate directly to real-world applications."
+                color="blue"
+              />
             </div>
-            <div className="animate-slide-up" style={{
-            animationDelay: "0.3s"
-          }}>
-              <FeatureCard icon={<BookOpen size={24} />} title="Bite-sized Lessons" description="Short, focused lessons fit into your busy schedule, making consistent progress easy." color="teal" />
+            <div
+              className="animate-slide-up"
+              style={{
+                animationDelay: "0.3s",
+              }}
+            >
+              <FeatureCard
+                icon={<BookOpen size={24} />}
+                title="Bite-sized Lessons"
+                description="Short, focused lessons fit into your busy schedule, making consistent progress easy."
+                color="teal"
+              />
             </div>
           </div>
         </div>
       </section>
 
       {/* How It Works */}
-      <section id="how-it-works" className="container mx-auto px-4 py-16 md:py-24">
+      <section
+        id="how-it-works"
+        className="container mx-auto px-4 py-16 md:py-24"
+      >
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">How Kojo Works</h2>
-          <p className="text-xl max-w-2xl mx-auto text-gray-700">Our approach makes learning to code fun and effective</p>
+          <h2 className="text-3xl md:text-4xl font-bold mb-4">
+            How Kojo Works
+          </h2>
+          <p className="text-xl max-w-2xl mx-auto text-gray-700">
+            Our approach makes learning to code fun and effective
+          </p>
         </div>
-        
+
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <div className="order-2 md:order-1">
             <div className="space-y-8">
-              <div className="flex items-start space-x-4 animate-slide-right" style={{
-              animationDelay: "0.1s"
-            }}>
-                <div className="bg-kojo-purple text-white text-xl font-bold rounded-full w-10 h-10 flex items-center justify-center flex-shrink-0 border-2 border-black">1</div>
+              <div
+                className="flex items-start space-x-4 animate-slide-right"
+                style={{
+                  animationDelay: "0.1s",
+                }}
+              >
+                <div className="bg-kojo-purple text-kojo-darktext-xl font-bold rounded-full w-10 h-10 flex items-center justify-center flex-shrink-0 border-2 border-black">
+                  1
+                </div>
                 <div>
-                  <h3 className="text-xl font-bold mb-2">Learn concepts step-by-step</h3>
-                  <p className="text-gray-700">Start with the basics and gradually build your knowledge through guided project-based lessons</p>
+                  <h3 className="text-xl font-bold mb-2">
+                    Learn concepts step-by-step
+                  </h3>
+                  <p className="text-gray-700">
+                    Start with the basics and gradually build your knowledge
+                    through guided project-based lessons
+                  </p>
                 </div>
               </div>
-              
-              <div className="flex items-start space-x-4 animate-slide-right" style={{
-              animationDelay: "0.2s"
-            }}>
-                <div className="bg-kojo-blue text-kojo-dark text-xl font-bold rounded-full w-10 h-10 flex items-center justify-center flex-shrink-0 border-2 border-black">2</div>
+
+              <div
+                className="flex items-start space-x-4 animate-slide-right"
+                style={{
+                  animationDelay: "0.2s",
+                }}
+              >
+                <div className="bg-kojo-blue text-kojo-dark text-xl font-bold rounded-full w-10 h-10 flex items-center justify-center flex-shrink-0 border-2 border-black">
+                  2
+                </div>
                 <div>
-                  <h3 className="text-xl font-bold mb-2">Practice with interactive challenges</h3>
-                  <p className="text-gray-700">Apply what you've learned through fun coding puzzles and real-world problems.</p>
+                  <h3 className="text-xl font-bold mb-2">
+                    Practice with interactive challenges
+                  </h3>
+                  <p className="text-gray-700">
+                    Apply what you've learned through fun coding puzzles and
+                    real-world problems.
+                  </p>
                 </div>
               </div>
-              
-              <div className="flex items-start space-x-4 animate-slide-right" style={{
-              animationDelay: "0.3s"
-            }}>
-                <div className="bg-kojo-teal text-kojo-dark text-xl font-bold rounded-full w-10 h-10 flex items-center justify-center flex-shrink-0 border-2 border-black">3</div>
+
+              <div
+                className="flex items-start space-x-4 animate-slide-right"
+                style={{
+                  animationDelay: "0.3s",
+                }}
+              >
+                <div className="bg-kojo-teal text-kojo-dark text-xl font-bold rounded-full w-10 h-10 flex items-center justify-center flex-shrink-0 border-2 border-black">
+                  3
+                </div>
                 <div>
-                  <h3 className="text-xl font-bold mb-2">Build real projects</h3>
-                  <p className="text-gray-700">Create your own apps and games as you advance your skills and confidence.</p>
+                  <h3 className="text-xl font-bold mb-2">
+                    Build real projects
+                  </h3>
+                  <p className="text-gray-700">
+                    Create your own apps and games as you advance your skills
+                    and confidence.
+                  </p>
                 </div>
               </div>
             </div>
-            
+
             <div className="mt-12 animate-slide-up">
-              <KojoButton variant="purple" className="w-full sm:w-auto" onClick={() => setIsModalOpen(true)} icon={<Zap size={20} />}>
+              {/* <KojoButton
+                variant="purple"
+                className="w-full sm:w-auto"
+                onClick={() => setIsModalOpen(true)}
+                icon={<Zap size={20} />}
+              >
                 Get started with Kojo
-              </KojoButton>
+              </KojoButton> */}
             </div>
           </div>
-          
+
           <div className="order-1 md:order-2 flex justify-center animate-slide-left">
             <div className="card-kojo bg-gray-50 p-8">
               <div className="text-center mb-4">
@@ -158,22 +265,28 @@ const Index = () => {
                   Lesson 1: Variables
                 </div>
               </div>
-              
+
               <div className="bg-white rounded-xl p-4 border-2 border-black mb-6">
                 <p className="font-mono">
-                  <span className="text-kojo-purple">let</span> score = <span className="text-kojo-blue">0</span>;
+                  <span className="text-kojo-purple">let</span> score ={" "}
+                  <span className="text-kojo-blue">0</span>;
                 </p>
                 <p className="font-mono">
-                  <span className="text-kojo-purple">if</span> (answer === <span className="text-green-500">"correct"</span>) {'{'}
+                  <span className="text-kojo-purple">if</span> (answer ==={" "}
+                  <span className="text-green-500">"correct"</span>) {"{"}
                 </p>
                 <p className="font-mono pl-4">
                   score += <span className="text-kojo-blue">10</span>;
                 </p>
-                <p className="font-mono">{'}'}</p>
+                <p className="font-mono">{"}"}</p>
               </div>
-              
-              <img src="/lovable-uploads/e8aee2d2-c18f-445b-8a01-69227e028ebe.png" alt="Kojo character" className="w-16 h-auto mx-auto" />
-              
+
+              <img
+                src="/lovable-uploads/e8aee2d2-c18f-445b-8a01-69227e028ebe.png"
+                alt="Kojo character"
+                className="w-16 h-auto mx-auto"
+              />
+
               <p className="text-center mt-3 font-medium">
                 Great job! Now try the next challenge.
               </p>
@@ -183,16 +296,22 @@ const Index = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="bg-kojo-purple py-16">
+      <section className="py-16">
         <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-6 text-white">Ready to start your coding journey?</h2>
-          <p className="text-xl text-white opacity-90 mb-8 max-w-2xl mx-auto">
-            Join thousands of learners who are building real coding skills with Kojo
+          <h2 className="text-3xl md:text-4xl font-bold mb-6 text-kojo-dark">
+            Ready to start your coding journey?
+          </h2>
+          <p className="text-xl text-kojo-dark opacity-90 mb-8 max-w-2xl mx-auto">
+            Build real coding skills with bite-sized lessons and fun projects.
           </p>
-          
+
           <div className="flex justify-center">
-            <KojoButton variant="blue" onClick={() => setIsModalOpen(true)} icon={<Bell size={20} />}>
-              Notify on release
+            <KojoButton
+              variant="purple"
+              onClick={() => setIsModalOpen(true)}
+              icon={<Bell size={20} />}
+            >
+              Join Waitlist
             </KojoButton>
           </div>
         </div>
@@ -206,24 +325,42 @@ const Index = () => {
               <h2 className="text-2xl font-bold">Kojo</h2>
               <p className="text-gray-600 mt-2">Learn coding the fun way</p>
             </div>
-            
+
             <div className="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-8">
-              <a href="#features" className="hover:text-kojo-purple transition-colors">Features</a>
-              <a href="#how-it-works" className="hover:text-kojo-purple transition-colors">How It Works</a>
-              <a href="#" className="hover:text-kojo-purple transition-colors">Privacy Policy</a>
-              <a href="#" className="hover:text-kojo-purple transition-colors">Terms of Service</a>
+              <a
+                href="#features"
+                className="hover:text-kojo-purple transition-colors"
+              >
+                Features
+              </a>
+              <a
+                href="#how-it-works"
+                className="hover:text-kojo-purple transition-colors"
+              >
+                How It Works
+              </a>
+              {/* <a href="#" className="hover:text-kojo-purple transition-colors">
+                Privacy Policy
+              </a>
+              <a href="#" className="hover:text-kojo-purple transition-colors">
+                Terms of Service
+              </a> */}
             </div>
           </div>
-          
+
           <div className="border-t mt-8 pt-8 text-center text-gray-500 text-sm">
             <p>&copy; {new Date().getFullYear()} Kojo. All rights reserved.</p>
           </div>
         </div>
       </footer>
 
-      {/* Notify Modal */}
-      <NotifyModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
-    </div>;
+      {/* Waitlist Modal */}
+      <WaitlistModal
+        isOpen={isModalOpen}
+        onClose={() => setIsModalOpen(false)}
+      />
+    </div>
+  );
 };
 
 export default Index;

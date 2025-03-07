@@ -1,4 +1,3 @@
-
 import { cn } from "@/lib/utils";
 import { ReactNode } from "react";
 
@@ -8,6 +7,7 @@ interface KojoButtonProps {
   className?: string;
   onClick?: () => void;
   icon?: ReactNode;
+  disabled?: boolean;
 }
 
 export const KojoButton = ({
@@ -15,18 +15,24 @@ export const KojoButton = ({
   variant = "purple",
   className,
   onClick,
-  icon
+  icon,
+  disabled = false,
 }: KojoButtonProps) => {
   const variantClass = {
     purple: "btn-kojo-purple",
     blue: "btn-kojo-blue",
     teal: "btn-kojo-teal",
   };
-  
+
   return (
-    <button 
-      className={cn(variantClass[variant], className)}
+    <button
+      className={cn(
+        variantClass[variant],
+        className,
+        disabled ? "opacity-70 cursor-not-allowed" : ""
+      )}
       onClick={onClick}
+      disabled={disabled}
     >
       {icon && <span className="mr-2">{icon}</span>}
       {children}
