@@ -159,8 +159,8 @@ const Index = () => {
             >
               <FeatureCard
                 icon={<BookOpen size={24} />}
-                title="Bite-sized Lessons"
-                description="Short, focused lessons fit into your busy schedule, making consistent progress easy."
+                title="Personalized Learning Path"
+                description="100% personalized LLM-generated curriculum and learning path suited to your needs."
                 color="teal"
               />
             </div>
@@ -178,7 +178,8 @@ const Index = () => {
             How Kojo Works
           </h2>
           <p className="text-xl max-w-2xl mx-auto text-gray-700">
-            Our approach makes learning to code fun and effective
+            Our approach makes learning to code fun and effective. Your learning
+            path is completely personalized based on your goals and interests.
           </p>
         </div>
 
@@ -216,7 +217,7 @@ const Index = () => {
                 </div>
                 <div>
                   <h3 className="text-xl font-bold mb-2">
-                    Practice with interactive challenges
+                    Practice with AI-generated interactive challenges
                   </h3>
                   <p className="text-gray-700">
                     Apply what you've learned through fun coding puzzles and
@@ -302,7 +303,7 @@ const Index = () => {
             Ready to start your coding journey?
           </h2>
           <p className="text-xl text-kojo-dark opacity-90 mb-8 max-w-2xl mx-auto">
-            Build real coding skills with bite-sized lessons and fun projects.
+            Build real coding skills with personalized lessons and projects.
           </p>
 
           <div className="flex justify-center">
