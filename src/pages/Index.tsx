@@ -50,9 +50,7 @@ const Index = () => {
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6">
               Learn to code with <span className="text-kojo-purple">Kojo</span>
             </h1>
-            <p className="text-xl mb-8 text-gray-700">
-              Master programming through fun, interactive lessons and build real coding skills at your own pace.
-            </p>
+            <p className="text-xl mb-8 text-gray-700">Master programming through fun, project-based lessons and build real coding skills at your own pace.</p>
             <div className="space-y-4 sm:space-y-0 sm:space-x-4 sm:flex">
               <KojoButton variant="purple" className="w-full sm:w-auto" onClick={() => setIsModalOpen(true)} icon={<Bell size={20} />}>
                 Notify on release
@@ -109,9 +107,7 @@ const Index = () => {
       <section id="how-it-works" className="container mx-auto px-4 py-16 md:py-24">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">How Kojo Works</h2>
-          <p className="text-xl max-w-2xl mx-auto text-gray-700">
-            Our proven approach makes learning to code fun and effective
-          </p>
+          <p className="text-xl max-w-2xl mx-auto text-gray-700">Our approach makes learning to code fun and effective</p>
         </div>
         
         <div className="grid md:grid-cols-2 gap-12 items-center">
@@ -123,7 +119,7 @@ const Index = () => {
                 <div className="bg-kojo-purple text-white text-xl font-bold rounded-full w-10 h-10 flex items-center justify-center flex-shrink-0 border-2 border-black">1</div>
                 <div>
                   <h3 className="text-xl font-bold mb-2">Learn concepts step-by-step</h3>
-                  <p className="text-gray-700">Start with the basics and gradually build your knowledge through guided lessons.</p>
+                  <p className="text-gray-700">Start with the basics and gradually build your knowledge through guided project-based lessons</p>
                 </div>
               </div>
               
