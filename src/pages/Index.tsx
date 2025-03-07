@@ -4,9 +4,11 @@ import { NotifyModal } from "@/components/NotifyModal";
 import { FeatureCard } from "@/components/FeatureCard";
 import { StreakCard } from "@/components/StreakCard";
 import { Bell, Code, Trophy, BookOpen, Zap, Menu, X } from "lucide-react";
+
 const Index = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+
   return <div className="min-h-screen">
       {/* Header */}
       <header className="container mx-auto px-4 py-6">
@@ -18,6 +20,9 @@ const Index = () => {
           <nav className="hidden md:flex items-center space-x-8">
             <a href="#features" className="font-medium hover:text-kojo-purple transition-colors">Features</a>
             <a href="#how-it-works" className="font-medium hover:text-kojo-purple transition-colors">How It Works</a>
+            <KojoButton variant="purple" onClick={() => setIsModalOpen(true)} icon={<Bell size={18} />}>
+              Notify on release
+            </KojoButton>
           </nav>
           
           <button className="md:hidden p-2" onClick={() => setMobileMenuOpen(!mobileMenuOpen)}>
@@ -33,12 +38,6 @@ const Index = () => {
               <a href="#how-it-works" className="py-2 font-medium hover:text-kojo-purple transition-colors" onClick={() => setMobileMenuOpen(false)}>
                 How It Works
               </a>
-              <KojoButton variant="purple" onClick={() => {
-            setIsModalOpen(true);
-            setMobileMenuOpen(false);
-          }} icon={<Bell size={18} />}>
-                Notify on release
-              </KojoButton>
             </nav>
           </div>}
       </header>
@@ -225,4 +224,5 @@ const Index = () => {
       <NotifyModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
     </div>;
 };
+
 export default Index;
