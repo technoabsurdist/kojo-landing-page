@@ -9,6 +9,10 @@ const Index = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
+  const redirectToChallenges = () => {
+    window.open("https://kojo-challenges.vercel.app/");
+  };
+
   return (
     <div className="min-h-screen">
       {/* Header */}
@@ -31,9 +35,12 @@ const Index = () => {
             >
               How It Works
             </a>
-            {/* <KojoButton variant="purple" onClick={() => setIsModalOpen(true)} icon={<Bell size={18} />}> */}
-            {/* Join Waitlist */}
-            {/* </KojoButton> */}
+            <a
+              href="https://kojo-challenges.vercel.app/"
+              className="font-medium hover:text-kojo-purple transition-colors"
+            >
+              Challenges
+            </a>
           </nav>
 
           <button
@@ -61,6 +68,14 @@ const Index = () => {
               >
                 How It Works
               </a>
+              <KojoButton
+                variant="blue"
+                className="w-full sm:w-auto"
+                onClick={() => redirectToChallenges()}
+                icon={<Code size={20} />}
+              >
+                Try out challenges
+              </KojoButton>
             </nav>
           </div>
         )}
@@ -74,8 +89,8 @@ const Index = () => {
               Learn to code with <span className="text-kojo-purple">Kojo</span>
             </h1>
             <p className="text-xl mb-8 text-gray-700">
-              Master programming with a fully personalized learning path,
-              using fun projects to build real coding skills.
+              Master programming with a fully personalized learning path, using
+              fun projects to build real coding skills.
             </p>
             <div className="space-y-4 sm:space-y-0 sm:space-x-4 sm:flex">
               <KojoButton
@@ -85,6 +100,14 @@ const Index = () => {
                 icon={<Bell size={20} />}
               >
                 Join Waitlist
+              </KojoButton>
+              <KojoButton
+                variant="blue"
+                className="w-full sm:w-auto"
+                onClick={() => redirectToChallenges()}
+                icon={<Code size={20} />}
+              >
+                Try out challenges
               </KojoButton>
             </div>
           </div>
@@ -179,8 +202,9 @@ const Index = () => {
             How Kojo Works
           </h2>
           <p className="text-xl max-w-2xl mx-auto text-gray-700">
-          Kojo puts projects at the center of learning, guiding you through
-          hands-on challenges that build real skills and a portfolio that proves it.
+            Kojo puts projects at the center of learning, guiding you through
+            hands-on challenges that build real skills and a portfolio that
+            proves it.
           </p>
         </div>
 
@@ -270,15 +294,14 @@ const Index = () => {
 
               <div className="bg-white rounded-xl p-4 border-2 border-black mb-6">
                 <p className="font-mono">
-                  score ={" "}
-                  <span className="text-kojo-blue">0</span>
+                  score = <span className="text-kojo-blue">0</span>
                 </p>
                 <p className="font-mono">
                   <span className="text-kojo-purple">if</span> answer =={" "}
                   <span className="text-green-500">"correct"</span>:
                 </p>
                 <p className="font-mono pl-4">
-                    score += <span className="text-kojo-blue">10</span>
+                  score += <span className="text-kojo-blue">10</span>
                 </p>
               </div>
 
@@ -339,6 +362,12 @@ const Index = () => {
                 className="hover:text-kojo-purple transition-colors"
               >
                 How It Works
+              </a>
+              <a
+                className="hover:text-kojo-purple transition-colors"
+                onClick={() => redirectToChallenges()}
+              >
+                Challenges
               </a>
               {/* <a href="#" className="hover:text-kojo-purple transition-colors">
                 Privacy Policy
